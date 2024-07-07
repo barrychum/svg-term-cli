@@ -16,7 +16,7 @@ RUN git clone https://github.com/barrychum/svg-term-cli.git .
 RUN if [ -f package-lock.json ]; then npm ci; else npm install; fi
 
 # Build the application (if a build script exists)
-RUN npm run build || echo "No build script found, continuing..."
+# RUN npm run build || echo "No build script found, continuing..."
 
 # Production stage
 FROM node:20-alpine
